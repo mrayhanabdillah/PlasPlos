@@ -85,8 +85,9 @@ class AnwsController extends Controller
      * @param  \App\Models\anws  $anws
      * @return \Illuminate\Http\Response
      */
-    public function destroy(anws $anws)
+    public function destroy($id)
     {
-        //
+        anws::where('question_id',$id)->delete();
+        return redirect()->back();
     }
 }

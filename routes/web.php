@@ -52,3 +52,4 @@ Route::delete('/deletequestion/{id}', [AsksController::class, 'destroy']);
 //Route Answer
 Route::get('/answer/{ask:slug}', [AnwsController::class, 'index']);
 Route::post('/answer/{ask:slug}', [AnwsController::class, 'create']);
+Route::delete('/answerrefresh/{id}', [AnwsController::class, 'destroy']);

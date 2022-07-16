@@ -6,11 +6,21 @@
         </div>
         <div class="flex justify-center mt-5">
             <div class="card bg-accent w-[20rem] bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <p class="text-xl text-center">{{ $quest->description }}</p>
-                    <input type="text" placeholder="Ceplas Ceplos aja ges" class="input rounded-3xl bg-base-200 w-full max-w-xs" />
-                    <a class="btn btn-sm btn-primary" href="/answer/{{ $quest->slug }}" target="_blank">preview</a>
-                </div>
+                <form action="/answerrefresh/{{ $quest->id }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <div class="card-body">
+                        <p class="text-xl text-center">{{ $quest->description }}</p>
+                        <input type="text" placeholder="Ceplas Ceplos aja ges"
+                            class="input rounded-3xl bg-base-200 w-full max-w-xs" />
+
+
+                        <a class="btn btn-sm btn-primary" href="/answer/{{ $quest->slug }}" target="_blank">preview</a>
+                        <button class="btn btn-sm btn-primary">refresh
+                            answer</button>
+
+                    </div>
+                </form>
             </div>
         </div>
         <div>
