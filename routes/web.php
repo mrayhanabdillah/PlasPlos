@@ -45,6 +45,7 @@ Route::post('/logout', [LogResController::class, 'logout']);
 
 // Route Question
 Route::get('/addquestion', [AsksController::class, 'index']);
+Route::get('/question', [AsksController::class, 'indexL']);
 Route::get('/detailquestion/{ask:slug}', [AsksController::class, 'show']);
 Route::post('/addquestion', [AsksController::class, 'create']);
 Route::delete('/deletequestion/{id}', [AsksController::class, 'destroy']);

@@ -1,4 +1,8 @@
-.alert-dismissible {
-    display: none;
+.hover:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+    border-radius: 30px;
+    text-align: center;
 }
 
